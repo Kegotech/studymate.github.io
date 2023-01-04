@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: #232c68;
+}
+.blog-card{
+    position: absolute;
+    height: 500px;
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 25px;
+    
+}
+.blog-card .inner-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    position: absolute;
+   
+}
+.custom-box {
+    max-width: 700px;
+    background-color: #eeeeee;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+
+.content{
+    padding: 0 20px 0 35px;
+    width: 530px;
+    margin-left: 20px;
+    opacity: 0;
+    transition: .6s;
+}
+#tap-1:checked ~ .inner-part .content-1,
+#tap-2:checked ~ .inner-part .content-2,
+#tap-3:checked ~ .inner-part .content-3,
+#tap-4:checked ~ .inner-part .content-4,
+#tap-5:checked ~ .inner-part .content-5,
+#tap-6:checked ~ .inner-part .content-6
+{
+    opacity: 1;
+    margin-left: 0px;
+    z-index: 100;
+    transition-delay:.3s;
+}
+.content span{
+    display: block;
+    color: #7b7992;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.content .title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-bottom: 10px;
+}
+.content .text{
+    font-size: 14px;
+    color: #232c68;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.content button{
+    display: inline-flex;
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background:#f89837;
+    outline: none;
+    cursor: pointer;
+}
+.content button a{
+    text-decoration: none;
+    color: white;
+}
+.content button:hover{
+    background: #232c68;
+    color: white;
+}
+.sliders{
+    position: absolute;
+    bottom: 25px;
+    left: 32%;
+    z-index: 100;
+    transition: translateX(-50%);
+}
+.sliders .tap{
+    position: relative;
+    height: 10px;
+    width: 50px;
+    background: #d9d9d9;
+    border-radius: 2px;
+    display: inline-flex;
+    cursor: pointer;
+    margin: 0 3px;
+}
+.sliders .tap:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: -100%;
+    background: #f89837;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin:left;
+}
+.sliders .tap:hover:before{
+    transform: scaleX(1);
+    width: 100%;
+}
+#tap-1:checked ~ .sliders .tap-1:before,
+#tap-2:checked ~ .sliders .tap-2:before,
+#tap-3:checked ~ .sliders .tap-3:before,
+#tap-4:checked ~ .sliders .tap-4:before,
+#tap-5:checked ~ .sliders .tap-5:before,
+#tap-6:checked ~ .sliders .tap-6:before{
+    transform: scaleX(1);
+    width: 100%;
+}
+input{
+    display: none;
+}
+@media screen and (max-width: 50rem) {
+    .inner-part{
+        flex-direction: column;
+    }
+    .blog-card{
+        height: 900px;
+    }
+    .sliders{
+        left: 10%;
+    }
+    .content{
+        margin-left: 0;
+        width: auto;
+        margin-top: 1rem;
+    }
+    .text{
+        text-align: left !important;
+    }
+    
+}

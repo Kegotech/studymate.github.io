@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Studymate</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="home-box custom-box">
+        <h3>Science Standard <span style="font-weight: 700;">7</span> Term 1</h3>
+        <p>Total number of questions: <span class="total-question"></span></p>
+        <button class="btn" onclick="startQuiz()">Start</button>
+        <button class="btn" onclick="startQuiz()">Back</button>
+    </div>
+
+    <div class="quiz-box custom-box hide">
+        <div class="question-number">
+            
+        </div>
+        <div class="question-text">
+           
+        </div>
+        <div class="option-container">
+            
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next Question</button>
+        </div>
+        <div class="answers-indicator">
+         
+        </div>
+
+    </div>
+
+    <!--Results Starts-->
+    <div class="result-box custom-box hide">
+        <h1>Results</h1>
+        <table>
+            <tr>
+                <td>Total Questions</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Answered</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="pecentage"></span></td>
+            </tr>
+            <tr>
+                <td>Your Score</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Re-try</button> 
+        <button type="button" class="btn" onclick="goToHome()">Home</button>
+    </div>
+
+    <!--Results End-->
+
+
+    <!--JavaScript Link-->
+    <script src="../js/science-std7-1.js"></script>
+    <script src="../js/std7-1.js"></script>
+</body>
+
+</html>
